@@ -33,7 +33,7 @@ const ProductDescription = (porps) => {
         </div>
         <div className="product_tab_panel">
           {currentTab === 1 ? (
-            <div>{tabInfo[0].description}</div>
+            <div>{tabInfo[0]?.description}</div>
           ) : (
             <div>
               <h4>Business Models</h4>
