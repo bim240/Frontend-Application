@@ -13,7 +13,7 @@ const Product = (props) => {
 
   useEffect(() => {
     getAllInfo();
-  }, []);
+  });
   return (
     <>
       <ProductDescription {...props} />

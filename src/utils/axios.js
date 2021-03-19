@@ -1,10 +1,5 @@
 import axios from "axios";
 import { SERVER_DOMAIN } from "./constants";
-import {
-  authRequestInterceptor,
-  authResponseInterceptor,
-} from "middleware/auth";
-import history from "utils/history";
 
 // const VERSION_CODE = 'v0';
 

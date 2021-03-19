@@ -32,6 +32,7 @@ const productReducer = (state = initialState, action) =>
             businessModels: payload.businessModels,
           },
         ];
+        break;
       // all the user action such as login and other
       // case UPDATE_INFO:
       //   draft[payload.key] = payload.value;
