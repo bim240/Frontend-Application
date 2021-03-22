@@ -12,26 +12,11 @@ import request from "utils/request";
 
 const Product = (props) => {
   const { getAllInfo } = props;
-  // const { data, error } = useSWR(
-  //   `https://api-test.innoloft.com/product/6781/`,
-  //   request
-  // );
-  // let picture = data && data.picture;
-  // let tabInfo = data && [
-  //   { name: "Description", description: data.description },
-  //   {
-  //     name: "Attributes",
-  //     categories: data.categories,
-  //     businessModels: data.businessModels,
-  //   },
-  // ];
-  // let productMainInfo = { title: data.name, type: data.type };
-  // console.log(data, "data from api");
 
-  // useEffect(() => {
-  //   getAllInfo();
-  // });
-  return <> {getAllInfo ? <ProductDescription {...props} /> : ""}</>;
+  useEffect(() => {
+    getAllInfo();
+  });
+  return <> {props.tabInfo ? <ProductDescription {...props} /> : ""}</>;
 };
 
 function mapStateToProps(state) {

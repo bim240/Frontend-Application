@@ -14,10 +14,7 @@ import { useEffect } from "react";
 import { getAllInfo } from "containers/Product/action";
 
 const App = (props) => {
-  const { user, company, getAllInfo } = props;
-  useEffect(() => {
-    getAllInfo();
-  }, []);
+  const { user, company } = props;
   return (
     <AppWrapper>
       <Header />
@@ -52,7 +49,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   // connect all the function for disipacting action
-  return { getAllInfo: (payload) => dispatch(getAllInfo(payload)) };
+  return {};
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);

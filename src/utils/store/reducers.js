@@ -16,9 +16,6 @@ export default function createReducer(injectedReducers = {}) {
   });
 
   const rootReducer = (state, action) => {
-    if (action.type === "containers/App/USER_LOGOUT") {
-      state = undefined;
-    }
     return appReducer(state, action);
   };
 
