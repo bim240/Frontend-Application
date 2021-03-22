@@ -14,11 +14,7 @@ const Product = (props) => {
   useEffect(() => {
     getAllInfo();
   });
-  return (
-    <>
-      <ProductDescription {...props} />
-    </>
-  );
+  return <> {getAllInfo ? <ProductDescription {...props} /> : ""}</>;
 };
 
 function mapStateToProps(state) {
