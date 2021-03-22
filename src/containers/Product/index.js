@@ -15,7 +15,7 @@ const Product = (props) => {
 
   useEffect(() => {
     getAllInfo();
-  });
+  }, []);
   return <> {props.tabInfo ? <ProductDescription {...props} /> : ""}</>;
 };
 
