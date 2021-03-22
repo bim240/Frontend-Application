@@ -7,8 +7,6 @@ import { injectReducer, injectSaga } from "redux-injectors";
 import { getAllInfo, updateInfo } from "./action";
 import reducer from "./reducer";
 import saga from "./saga";
-import useSWR from "swr";
-import request from "utils/request";
 
 const Product = (props) => {
   const { getAllInfo } = props;

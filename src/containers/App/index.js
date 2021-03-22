@@ -15,6 +15,10 @@ import { getAllInfo } from "containers/Product/action";
 
 const App = (props) => {
   const { user, company } = props;
+
+  useEffect(() => {
+    getAllInfo();
+  }, []);
   return (
     <AppWrapper>
       <Header />
@@ -49,7 +53,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   // connect all the function for disipacting action
-  return {};
+  return { getAllInfo: (payload) => dispatch(getAllInfo(payload)) };
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
