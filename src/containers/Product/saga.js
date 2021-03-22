@@ -10,7 +10,6 @@ export function* requestAllInfo() {
       method: "GET",
       url: requestURL,
     });
-
     yield put(setAllInfo(response));
   } catch (err) {
     console.error(err);

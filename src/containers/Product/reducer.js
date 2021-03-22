@@ -25,9 +25,9 @@ const productReducer = (state = initialState, action) =>
         draft.company = payload.company;
         draft.productMainInfo = { title: payload.name, type: payload.type };
         draft.tabInfo = [
-          { ...draft.tabInfo[0], description: payload.description },
+          { name: "Description", description: payload.description },
           {
-            ...draft.tabInfo[1],
+            name: "Attributes",
             categories: payload.categories,
             businessModels: payload.businessModels,
           },
