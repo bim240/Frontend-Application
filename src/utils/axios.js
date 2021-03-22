@@ -5,7 +5,7 @@ import { SERVER_DOMAIN } from "./constants";
 
 // this can only be used for auth!
 const authInstance = axios.create({
-  baseURL: `${SERVER_DOMAIN}`,
+  // baseURL: `${SERVER_DOMAIN}`,
 });
 
 // authInstance.interceptors.request.use(authRequestInterceptor);

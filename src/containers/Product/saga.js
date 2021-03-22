@@ -5,7 +5,7 @@ import { GET_ALL_INFO } from "./constants";
 
 export function* requestAllInfo() {
   try {
-    const requestURL = `/product/6781/`;
+    const requestURL = `https://api-test.innoloft.com/product/6781/`;
     const response = yield call(request, {
       method: "GET",
       url: requestURL,
